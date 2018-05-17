@@ -1,0 +1,14 @@
+{
+  "id": "{CFA09DE0-80FA-42CC-827A-49DEE63CE662}",
+  "name": "FingerPrintControl",
+  "type": 3,
+  "vendor": "Schrader IT",
+  "aliases":
+  [
+    "FingerPrintControl"
+  ],
+  "parentRequirements": [],
+  "childRequirements": [],
+  "implemented": [],
+  "prefix": "SIB"
+}
