@@ -56,7 +56,7 @@ class FingerPrintControl extends IPSModule {
 		$this->LogMessage("CheckFinger", "This Finger: " . $CheckFinger);
 		$Users = json_decode($this->ReadPropertyString("Users"));
 
-		foreach($Users as $Finger => $value){
+		foreach($Users as $User => $value){
 			$ThisFinger = $value->FingerID;
 			$this->LogMessage("CheckFinger", "Finger " . $ThisFinger);
 			if (strcmp($ThisFinger, $CheckFinger) == 0){
