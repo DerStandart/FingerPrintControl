@@ -12,7 +12,7 @@ class FingerPrintControl extends IPSModule {
 		$this->RegisterPropertyInteger("FingerPrintVariable", 0);
 
 		$this->RegisterPropertyString("Actions", "");
-		$this->RegisterPropertyString("Fingers", "");
+		$this->RegisterPropertyString("Users", "");
 
 		$this->RegisterVariableString("UnknownFinger", "UnknownFinger", "", 0);
 		$this->RegisterVariableInteger("Actions", "Actions", "SIB.FCP.Actions", 0);
@@ -54,9 +54,9 @@ class FingerPrintControl extends IPSModule {
 	private function CheckFinger(string $CheckFinger){
 		$Found = FALSE;
 		$this->LogMessage("CheckFinger", "This Finger: " . $CheckFinger);
-		$Fingers = json_decode($this->ReadPropertyString("Fingers"));
+		$Users = json_decode($this->ReadPropertyString("Users"));
 
-		foreach($Fingers as $Finger => $value){
+		foreach($Users as $Finger => $value){
 			$ThisFinger = $value->FingerID;
 			$this->LogMessage("CheckFinger", "Finger " . $ThisFinger);
 			if (strcmp($ThisFinger, $CheckFinger) == 0){
@@ -141,11 +141,11 @@ class FingerPrintControl extends IPSModule {
                     }],
                     "values": []
                 },
-								{ "type": "Label", "label": "Fingers"},
+								{ "type": "Label", "label": "Users"},
 								{
                       "type": "List",
-                      "name": "Fingers",
-                      "caption": "Fingers",
+                      "name": "Users",
+                      "caption": "Users",
                       "add": true,
                       "delete": true,
                       "sort": {
@@ -153,14 +153,24 @@ class FingerPrintControl extends IPSModule {
                         "direction": "descending"
                       },
                       "columns": [{
-                        "label": "FingerID",
-                        "name": "FingerID",
+                        "label": "UserID",
+                        "name": "UserID",
                         "width": "75px",
                         "add": 0,
                         "edit": {
                             "type": "ValidationTextBox"
                         	}
-                        },{
+                        },
+												{
+	                        "label": "FingerID",
+	                        "name": "FingerID",
+	                        "width": "75px",
+	                        "add": 0,
+	                        "edit": {
+	                            "type": "ValidationTextBox"
+	                        	}
+	                        }
+												,{
                           "label": "Name",
                           "name": "Name",
                           "width": "auto",
