@@ -207,7 +207,7 @@ class FingerPrintControl extends IPSModule {
 		}
 		return json_encode($formdata);
 	}
-	private function LogMessage($Sender, $Message){
+	protected function LogMessage($Sender, $Message){
 		$this->SendDebug($Sender, $Message, 0);
 	}
 	private function CreateVariableProfile($ProfileName, $ProfileType, $Suffix, $MinValue, $MaxValue, $StepSize, $Digits, $Icon) {
