@@ -1,8 +1,6 @@
 {
   "elements":
   [
-    { "type": "Label", "label": "Modul by https://schrader-it.net"},
-    { "type": "Label", "label": ""},
-    { "type": "Label", "label": "Interesse an diesem Modul? Kontaktieren Sie uns ..."}
+    { "type": "Label", "label": "Modul by https://schrader-it.net"}
   ]
 }
