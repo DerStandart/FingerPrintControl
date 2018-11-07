@@ -153,14 +153,23 @@ class FingerPrintControl extends IPSModule {
                         "direction": "descending"
                       },
                       "columns": [{
-                        "label": "UserID",
-                        "name": "UserID",
+                        "label": "ReaderID",
+                        "name": "ReaderID",
                         "width": "75px",
                         "add": 0,
                         "edit": {
                             "type": "ValidationTextBox"
                         	}
                         },
+												{
+	                        "label": "UserID",
+	                        "name": "UserID",
+	                        "width": "75px",
+	                        "add": 0,
+	                        "edit": {
+	                            "type": "ValidationTextBox"
+	                        	}
+	                        },
 												{
 	                        "label": "FingerID",
 	                        "name": "FingerID",
